@@ -1,8 +1,4 @@
-package org.example;
-
-import Lesson2.Lesson2Class;
-
-import java.util.Arrays;
+package Lesson2;
 
 public class Main {
     public static void main(String[] args) {
