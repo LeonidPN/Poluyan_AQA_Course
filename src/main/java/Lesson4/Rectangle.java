@@ -2,7 +2,6 @@ package Lesson4;
 
 public class Rectangle extends Figure {
     private final double width;
-
     private final double length;
 
     public Rectangle(double width, double length, String borderColor, String backgroundColor) {

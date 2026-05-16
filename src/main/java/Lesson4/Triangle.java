@@ -2,9 +2,7 @@ package Lesson4;
 
 public class Triangle extends Figure {
     private final double sideA;
-
     private final double sideB;
-
     private final double sideC;
 
     public Triangle(double sideA, double sideB, double sideC, String borderColor, String backgroundColor) {

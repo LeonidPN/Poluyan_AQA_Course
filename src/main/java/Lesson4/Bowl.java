@@ -2,7 +2,6 @@ package Lesson4;
 
 public class Bowl {
     private final int capacity;
-
     private int foodCount;
 
     public Bowl(int capacity) {

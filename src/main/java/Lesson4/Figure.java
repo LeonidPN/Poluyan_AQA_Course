@@ -2,7 +2,6 @@ package Lesson4;
 
 public abstract class Figure implements Shape{
     private String borderColor;
-
     private String backgroundColor;
 
     public Figure(String borderColor, String backgroundColor) {
