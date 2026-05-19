@@ -15,9 +15,11 @@ public class Bowl {
     public int getFood(int foodCount) {
         if (this.foodCount >= foodCount) {
             this.foodCount -= foodCount;
-            return foodCount;
+        } else {
+            foodCount = this.foodCount;
+            this.foodCount = 0;
         }
-        return 0;
+        return foodCount;
     }
 
     public void addFood(int foodCount) {

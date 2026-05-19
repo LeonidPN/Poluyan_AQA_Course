@@ -23,7 +23,9 @@ public class Cat extends Animal {
     }
 
     public void eat(int foodCount, Bowl bowl) {
-        foodCount -= bowl.getFood(foodCount);
+        if (bowl.getFoodCount() >= foodCount) {
+            foodCount -= bowl.getFood(foodCount);
+        }
         if (foodCount == 0) {
             isHungry = false;
         }
