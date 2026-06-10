@@ -44,7 +44,7 @@ public class PaySectionTest extends BaseTest {
                 .fillSum("150")
                 .clickContinueButton()
                 .waitUntilFrameActive()
-                .waitUntilDescriptionShown()
+                .waitUntilFrameShown()
                 .checkDescription("Оплата: Услуги связи Номер:375297777777");
     }
 
@@ -78,5 +78,23 @@ public class PaySectionTest extends BaseTest {
         paySectionSteps.checkScoreArrearsPlaceholder("Номер счета на 2073")
                 .checkSumArrearsPlaceholder("Сумма")
                 .checkEmailArrearsPlaceholder("E-mail для отправки чека");
+    }
+
+    @Test
+    @DisplayName("Заполнение полей и проверка текстов в окне оплаты")
+    public void checkPaymentFrameTexts() {
+        paySectionSteps.fillPhoneNumber("297777777")
+                .fillSum("150")
+                .clickContinueButton()
+                .waitUntilFrameActive()
+                .waitUntilFrameShown()
+                .checkCost("150.00 BYN")
+                .checkPayButtonText("Оплатить 150.00 BYN")
+                .checkDescription("Оплата: Услуги связи Номер:375297777777")
+                .checkCardNumberLabel("Номер карты")
+                .checkCardExpiresLabel("Срок действия")
+                .checkCardCVCLabel("CVC")
+                .checkCardHolderLabel("Имя и фамилия на карте")
+                .checkPaySystemsLogos();
     }
 }

@@ -15,20 +15,23 @@ public class PaySectionSteps {
         paySectionPage = new PaySectionPage();
     }
 
-    public void acceptCookies() {
+    public PaySectionSteps acceptCookies() {
         if (!paySectionPage.getCookiesAcceptButton().isEmpty()) {
             paySectionPage.getCookiesAcceptButton().getFirst().click();
         }
+        return this;
     }
 
-    public void checkTitle(String expectedTitle) {
+    public PaySectionSteps checkTitle(String expectedTitle) {
         Assertions.assertEquals(expectedTitle, paySectionPage.getTitle().getText());
+        return this;
     }
 
-    public void checkPaySystemsLogos() {
+    public PaySectionSteps checkPaySystemsLogos() {
         for (WebElement element : paySectionPage.getPaySystemsLogos()) {
             Assertions.assertTrue(element.isDisplayed());
         }
+        return this;
     }
 
     public PaySectionSteps clickAboutServiceLink() {
@@ -42,8 +45,9 @@ public class PaySectionSteps {
         return this;
     }
 
-    public void checkUrl(String expectedUrl) {
+    public PaySectionSteps checkUrl(String expectedUrl) {
         Assertions.assertEquals(expectedUrl, SeleniumDriver.getInstance().getCurrentUrl());
+        return this;
     }
 
     public PaySectionSteps fillPhoneNumber(String phoneNumber) {
